@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Git – version control</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<section id="fragments" data-markdown>
+						<script type="text/template">
+							# Git
+
+							<small></a><a href="#">S.Krause(at)hochschule-trier.de</a></small>
+
+							<img class="fragment"  data-src="./gifs/why-00_backontrack.gif"/>
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							Warum Git (oder eine andere Versionskontrolle)?
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							### Datenverlust
+
+							<img data-src="./gifs/why-00_problems.gif"/>
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							### Backups
+
+							<img data-src="./gifs/rollback-00.gif"/>
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							### Auprobieren
+
+							<img data-src="./gifs/problem-solving-00.gif"/>
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<img data-src="./gifs/makes-sense-00.gif">
+				</section>
+
+				<section>
+					<section>
+						<h2>Aber aber... Kommandozeile</h2>
+						<img data-src="./gifs/git-bash.gif"/>
+					</section>
+					<section>
+						<img data-src="./images/git-shell.png"/>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Alternativen
+
+							+ [Git Extensions](http://gitextensions.github.io/)
+							+ [Tortoise Git](https://tortoisegit.org/)
+							+ [Source Tree](https://www.sourcetreeapp.com/)
+							+ [GitHub Desktop](https://desktop.github.com/)
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<h1>By-products</h1>
+					<section>
+						<h2>Presentationsversion</h2>
+						
+						<img data-src="./gifs/presentation-version.gif"/>
+					</section>
+					<section>
+						<h2>Teamwork</h2>
+						
+						<img data-src="./gifs/teamwork-00_smooth.gif"/>
+					</section>
+					
+					<section>
+						<h2>"Dokumentation"</h2>
+						
+						<img data-src="./gifs/git-documentation.gif"/>
+					</section>
+				</section>
+				
+				<section>
+					<h1>Workshop</h1>
+					
+					<section>
+						<h2>Hosts</h2>
+						
+						<div class="fragment">Bitbucket Cloud<small><a href="https://www.atlassian.com/software/views/bitbucket-academic-license.jsp">1</a></small></div>
+						<div class="fragment">GitHub <small><a href="https://education.github.com/">1</a></small></div>
+						<div class="fragment">Projektlaufwerk FH Trier RZ</div>
+						<div class="fragment">GitLab FSI</div>
+						<br>
+						
+						<small><div class="fragment" text-alignment="bottom"><small>1) Academic accounts</small></div></small>
+					</section>
+				</section>
+
+				<section>
+					<h1>Semantik</h1>
+					<section>
+						
+						<h3>Befehle</h3>
+						<ul>
+							<li class="fragment">clone<span class="fragment"> / init</span></li>
+							
+							<li class="fragment">commit</li>
+							<li class="fragment">push</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Struktur</h2>
+						
+						<h3></h3>
+						<ul>
+							<li class="fragment">branch</li>
+							<li class="fragment">remote</li>
+						</ul>
+					</section>
+
+					
+				</section>
+
+				<section>
+					<h1>weitere (D)VCS</h1>
+					<section data-markdown>
+						<script type="text/template">
+							
+						
+							+ [Subversion (SVN)](https://subversion.apache.org/)
+							+ [Mercurial (Hg)](https://www.mercurial-scm.org/)
+							+ [PerForce](https://www.perforce.com/)
+						</script>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
