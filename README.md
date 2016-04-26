@@ -1,7 +1,7 @@
 Small introductional git workshop.
 
-Presentation is inside the `gh-pages`-Branch
-
+Presentation is inside the `gh-pages`-Branch and is made with [reveal.js](https://github.com/hakimel/reveal.js/).
+[Git Workshop](http://hatieth.github.io/git-workshop)
 
 Workshop (master branch) Stages:
 + Clone the repository with `git clone https://github.com/HatiEth/git-workshop.git` (Https da keine Collaboratoren)
