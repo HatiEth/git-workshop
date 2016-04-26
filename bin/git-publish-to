@@ -1,0 +1,9 @@
+#!/bin/bash
+
+currentBranch=`git rev-parse --abbrev-ref HEAD`
+
+git checkout $1 && git pull
+git merge $currentBranch && git push
+git checkout $currentBranch
+
+
