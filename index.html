@@ -1,23 +1,15 @@
 <!doctype html>
-<html lang="en">
-
+<html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Git – version control</title>
-
-		<meta name="description" content="Git Version Control Workshop">
-		<meta name="author" content="Sebastian Krause">
-
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Code syntax highlighting -->
+		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
@@ -28,214 +20,15 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
 	</head>
-
 	<body>
-
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-
-				<section>
-					<section id="fragments" data-markdown>
-						<script type="text/template">
-							# Git
-
-							<small></a><a href="#">S.Krause(at)hochschule-trier.de</a></small>
-
-							<img class="fragment"  data-src="./gifs/why-00_backontrack.gif"/>
-						</script>
-					</section>
-				</section>
-
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							Warum Git (oder eine andere Versionskontrolle)?
-						</script>
-					</section>
-
-					<section data-markdown>
-						<script type="text/template">
-							### Datenverlust
-
-							<img data-src="./gifs/why-00_problems.gif"/>
-						</script>
-					</section>
-
-					<section data-markdown>
-						<script type="text/template">
-							### Backups
-
-							<img data-src="./gifs/rollback-00.gif"/>
-						</script>
-					</section>
-
-					<section data-markdown>
-						<script type="text/template">
-							### Auprobieren
-
-							<img data-src="./gifs/problem-solving-00.gif"/>
-						</script>
-					</section>
-				</section>
-
-				<section>
-					<img data-src="./gifs/makes-sense-00.gif">
-				</section>
-
-				<section>
-					<section>
-						<h2>Aber aber... Kommandozeile</h2>
-						<img data-src="./gifs/git-bash.gif"/>
-					</section>
-					<section>
-						<img data-src="./images/git-shell.png"/>
-					</section>
-					<section data-markdown>
-						<script type="text/template">
-							## Alternativen
-
-							+ [Git Extensions](http://gitextensions.github.io/)
-							+ [Tortoise Git](https://tortoisegit.org/)
-							+ [Source Tree](https://www.sourcetreeapp.com/)
-							+ [GitHub Desktop](https://desktop.github.com/)
-						</script>
-					</section>
-				</section>
-
-				<section>
-					<h1>By-products</h1>
-					<section>
-						<h4>Presentationsversion</h4>
-						
-						<img data-src="./gifs/presentation-version.gif"/>
-					</section>
-					<section>
-						<h4>Teamwork</h4>
-						
-						<img data-src="./gifs/teamwork-00_smooth.gif"/>
-					</section>
-					
-					<section>
-						<h4>"Dokumentation"</h4>
-						
-						<img data-src="./gifs/git-documentation.gif"/>
-					</section>
-				</section>
-				
-				<section>
-					<h1>Workshop</h1>
-					
-					<section>
-						<h2>Hosts</h2>
-						
-						<div class="fragment">Bitbucket Cloud<small><a href="https://www.atlassian.com/software/views/bitbucket-academic-license.jsp">1</a></small></div>
-						<div class="fragment">GitHub <small><a href="https://education.github.com/">1</a></small></div>
-						<div class="fragment">Projektlaufwerk FH Trier RZ</div>
-						<div class="fragment">GitLab FSI</div>
-						<br>
-						
-						<small><div class="fragment" text-alignment="bottom"><small>1) Academic accounts</small></div></small>
-					</section>
-				</section>
-
-				<section>
-					<h1>Semantik</h1>
-					<section>
-						
-						<h3>Befehle</h3>
-						<ul>
-							<li class="fragment">clone<span class="fragment"> / init</span></li>
-							
-							<li class="fragment">add</li>
-							<li class="fragment">commit</li>
-							<li class="fragment">pull</li>
-							<small>
-								<li class="fragment">(GitHub Desktop: 'sync')</li>
-								<li class="fragment">atomar: fetch & merge</li>
-							</small>
-							<li class="fragment">merge</li>
-							<li class="fragment">status</li>
-							<li class="fragment">push</li>
-						</ul>
-					</section>
-
-					<section>
-						<h3>Begriffe</h3>
-						<ul>
-							<li class="fragment">origin</li>
-							<li class="fragment">remote</li>
-						</ul>
-					</section>
-
-					<section>
-						<h3>Features</h3>
-						
-						<ul>
-							<li class="fragment">branch</li>
-							<li class="fragment">tags</li>
-						</ul>
-					</section>
-				</section>
-				
-				<section>
-					<h1>Live</h1>
-				</section>
-				
-				<section>
-					<h2>Merge Conflict</h2>
-					<div>
-						
-					<p><small class="fragment">Meist zu vermeiden</small></p>
-					
-					<img class="fragment" data-src="./gifs/Git-merge-conflict.gif"/>
-					
-					<li class="fragment"><a href="http://kdiff3.sourceforge.net/">KDiff3</a></li>
-					<li class="fragment">Bash-Alternativen meist mit eigener Lösung</li>
-					</div>
-				</section>
-				
-				<section>
-					<h2>Unity Best Practices</h2>
-					
-					<section>
-						<p class="fragment">Features <-> Szenen</p>
-						<p class="fragment">Finale Szene & Entwicklerszene</p>
-						<p class="fragment">Prefabs <3</p>
-						<div class="fragment">Edit/Project Settings/Editor
-							<div>
-							<small>Version Control: Visible Meta Files</small></div>
-							<div><small>Asset Serializaton: Force Text</small></div>
-						</div>
-					</section>
-				</section>
-
-				<section>
-					<h1>weitere (D)VCS</h1>
-					<section data-markdown>
-						<script type="text/template">
-							
-						
-							+ [Subversion (SVN)](https://subversion.apache.org/)
-							+ [Mercurial (Hg)](https://www.mercurial-scm.org/)
-							+ [Perforce](https://www.perforce.com/)
-						</script>
-					</section>
-				</section>
-
-
-				<section data-markdown>
-					<script type="text/template">
-						[Präsentation](http://hatieth.github.io/git-workshop)
-						
-						[GitHub Repo der Präsentation](https://github.com/hatieth/git-workshop)
-					</script>
+				<section data-markdown="presentation.md"
+				data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:"
+				data-charset="utf-8">
 				</section>
 			</div>
 		</div>
@@ -244,29 +37,25 @@
 		<script src="js/reveal.js"></script>
 
 		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
+			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
-				progress: true,
 				history: true,
-				center: true,
+				showNotes: false,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				math: {
+					mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+					config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+				},
 
-				// Optional reveal.js plugins
+				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'plugin/math/math.js', async: true },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
-
 		</script>
-
 	</body>
 </html>
